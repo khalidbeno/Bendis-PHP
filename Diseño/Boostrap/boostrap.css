@@ -1,0 +1,239 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Babe', sans-serif;
+    font-weight: bold;
+    overflow-x: hidden;
+    background: linear-gradient(-60deg, #a8e6ff 50%, white 50%);
+}
+
+/* ---------------------- CABECERA ---------------------- */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ---------------------- PÁGINA 1 ---------------------- */
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centro img {
+    margin-top: 10%;
+    height: 100%;
+}
+
+/* ---------------------- PÁGINA 2 ---------------------- */
+.pag2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 1%;
+    background: linear-gradient(60deg, #a8e6ff 50%, white 50%);
+}
+
+.tituloPresentacion {
+    width: 50%;
+    text-align: center;
+}
+
+.tituloPresentacion h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.presentacionText {
+    width: 50%;
+    text-align: right;
+}
+
+.presentacionText h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.presentacionText h2 {
+    color: #6ca4c8;
+    font-size: 4em;
+}
+
+.presentacionText button {
+    background-color: #6ca4c8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* ---------------------- PÁGINA 3 (SOBRE NOSOTROS) ---------------------- */
+.pag3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 50px 20px;
+    background: linear-gradient(-60deg, #a8e6ff 50%, white 50%);
+}
+
+.sobreNosotros h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sobreNosotros p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 5%;
+}
+
+.nosotrosCuadro {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cuadro {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cuadro h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* ---------------------- CONTACTO ---------------------- */
+.informacionContato {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.2em;
+    color: black;
+}
+
+.footer {
+    background-color: #555;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    color: white;
+}
+
+/* ---------------------- MEDIA QUERIES ---------------------- */
+@media (max-width: 768px) {
+    .pag2 {
+        flex-direction: column;
+        height: auto;
+    }
+    .presentacionText, .tituloPresentacion {
+        width: 100%;
+        text-align: center;
+    }
+    .sobreNosotros {
+        width: 90%;
+    }
+    .sobreNosotros p {
+        margin: 0 10%;
+    }
+    .informacionContato {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: #a8e6ff;
+    }
+    #header{
+        flex-direction: column;
+        font-size: 0.5em;
+    }
+
+    .menu {
+        display: flex;
+        align-items:l baseline;
+        padding: 10px;
+    }
+
+    .menu a {
+        text-align: center; 
+        margin: 10px; 
+    }
+
+    
+    .logo{
+        display: none;
+    }
+    .pag2 {
+        flex-direction: column;
+        height: auto;
+    }
+    .presentacionText, .tituloPresentacion {
+        width: 100%;
+        text-align: center;
+    }
+    .sobreNosotros p {
+        font-size: 1.1em;
+        margin: 0 10%;
+    }
+    .presentacionText h1 {
+        font-size: 2em;
+    }
+    .presentacionText h2 {
+        font-size: 2.5em;
+    }
+    .presentacionText p {
+        margin: 0 10%;
+    }
+    .informacionContato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+}
