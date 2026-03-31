@@ -1,0 +1,235 @@
+ body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            z-index: 3;
+        }
+
+        .logo a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .register-container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 450px;
+            z-index: 2;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .register-container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #29c4f5, #3a7bd5);
+            z-index: -1;
+            border-radius: 25px;
+            opacity: 0.7;
+            filter: blur(10px);
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .register-header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .form-group.floating-label input {
+            width: 100%;
+            padding: 15px 15px 10px 15px;
+            border: none;
+            border-bottom: 2px solid #ecf0f1;
+            background-color: transparent;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        .form-group.floating-label label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #95a5a6;
+            font-size: 16px;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        .form-group.floating-label input:focus ~ label,
+        .form-group.floating-label input:valid ~ label {
+            top: -10px;
+            left: 0;
+            font-size: 12px;
+            color: #29c4f5;
+        }
+
+        .focus-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #29c4f5;
+            transition: width 0.4s;
+        }
+
+        .form-group.floating-label input:focus ~ .focus-border {
+            width: 100%;
+        }
+
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-btn {
+            background: linear-gradient(45deg, #29c4f5, #3a7bd5);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(41, 196, 245, 0.4);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(41, 196, 245, 0.6);
+        }
+
+        .error-message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffebee;
+            border-radius: 8px;
+            color: #c62828;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.5s;
+        }
+
+        .error-message p {
+            margin: 0;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .login-link a {
+            color: #3a7bd5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .form-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, rgba(41, 196, 245, 0.1), rgba(58, 123, 213, 0.1));
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .circle-3 {
+            width: 150px;
+            height: 150px;
+            bottom: 100px;
+            right: 100px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .register-container {
+                padding: 30px 20px;
+            }
+            
+            .register-header h1 {
+                font-size: 24px;
+            }
+            
+            .register-btn {
+                padding: 10px 20px;
+                min-width: 180px;
+            }
+        }
