@@ -27,10 +27,8 @@ Bendis-PHP/
 │   ├── requirements.pdf
 │   ├── mvc-diagram.png
 │   ├── er-diagram.png
-│   └── database.sql
-├── src/ (or your PHP files)
+│   └── database.sql 
 ├── README.md
-└── ...
 ```
 
 ## Tech Stack
@@ -39,6 +37,7 @@ Bendis-PHP/
 * MySQL
 * HTML / CSS
 * JavaScript
+* Laravel
 
 ## How to Run
 
@@ -77,7 +76,6 @@ It helped me understand how real web applications handle data, user interaction,
 
 * Migrate backend to FastAPI
 * Implement authentication (JWT)
-* Add Stripe payment integration
 * Improve UI/UX
 * Deploy on AWS
 
